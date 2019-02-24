@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// pointers 
 var n = flag.Bool("n", false, "omit trailing newling")
 var sep = flag.String("s", " ", "separator")
 func main() {
