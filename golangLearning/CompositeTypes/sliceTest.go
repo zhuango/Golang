@@ -8,6 +8,12 @@ func reverse(s []int) {
 	}
 }
 
+func reverse2(s *[6]int) {
+	for i, j := 0, len(*s) - 1; i < j; i, j = i + 1, j - 1 {
+		(*s)[i], (*s)[j] = (*s)[j], (*s)[i]
+	}
+}
+
 func main() {
 	a := [...]int {0, 1, 2, 3, 4, 5}
 	fmt.Println(a)
@@ -22,5 +28,11 @@ func main() {
 	reverse(b[2:])
 	reverse(b)
 	fmt.Println(b)
+
+	fmt.Println("=======reverse2=======")
+	c := [6]int {0, 1, 2, 3, 4, 5}
+	fmt.Println(c)
+	reverse2(&c)
+	fmt.Println(c)
 
 }
